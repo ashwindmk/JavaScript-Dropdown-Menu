@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<style type="text/css">
+			
+			body {
+				margin: 0px;
+			}
+			
+			#myheader {
+				height: 70px;
+				padding: 20px;
+				background: #999;
+			}
+			
+			#logo {
+				width: 100%;
+				height: 40px;
+				font-size: 25px;
+				color: #FFF;
+			}
+			
+			#headermenubar {
+				top: 70px;
+				width: 100%;
+			}
+			
+			#headermenubar > div {
+				float: left;
+				margin-top: 15px;
+			}
+			
+			.menus {
+				width: 100px;
+			}
+			
+			.dropmenus {
+				display: none;
+				position: absolute;
+				width: 200px;
+				margin-top: 5px;
+				padding: 5px;
+				background: white;
+				border: 1px solid black;
+			}
+			
+			a {
+				text-decoration: none;
+				color: #FFF;
+			}
+			
+			div .dropmenus > a {
+				display: block;
+				text-decoration: none;
+				padding: 5px;
+				background: #999;
+				color: #FFF;
+				border-bottom: 1px solid white;
+			}
+			
+			div .dropmenus > a:hover {
+				background: #FFF;
+				color: #000;
+			}
+			
+			#main-content {
+				padding: 20px;
+			}
+			
+		</style>
+		
+	</head>
+	<body>
+		
+		<!--START HEADER-->
+		<div id="myheader">
+      
+			<!--LOGO-->
+			<div id="logo">COMPANY LOGO</div>
+	  
+			<!--START MENU BAR-->
+			<div id="headermenubar">
+			
+              <div id="container1" class="menus">
+                  <a href="#" onclick="return false;" onmousedown="dropMenu('dropmenu1')">Menu 1</a>
+                  <div id="dropmenu1" class="dropmenus">
+                      <a href="#" onclick="return false;" onmousedown="clickMenu('Menu Item 1')">Menu Item 1</a>
+                      <a href="#" onclick="return false;" onmousedown="clickMenu('Menu Item 2')">Menu Item 2</a>
+                      <a href="#" onclick="return false;" onmousedown="clickMenu('Menu Item 3')">Menu Item 3</a>
+                  </div>
+              </div>
+			  
+              <div id="container2" class="menus">
+                <a href="#" onclick="return false;" onmousedown="dropMenu('dropmenu2')">Menu 2</a>
+                <div id="dropmenu2" class="dropmenus">
+                    <a href="#" onclick="return false;" onmousedown="clickMenu('Menu Item 4')">Menu Item 4</a>
+                    <a href="#" onclick="return false;" onmousedown="clickMenu('Menu Item 5')">Menu Item 5</a>
+                    <a href="#" onclick="return false;" onmousedown="clickMenu('Menu Item 6')">Menu Item 6</a>
+                </div>
+              </div>
+			  
+              <div id="container3" class="menus">
+                <a href="#" onclick="return false;" onmousedown="dropMenu('dropmenu3');">Menu 3</a>
+                <div id="dropmenu3" class="dropmenus">
+					<a href="#" onclick="return false;" onmousedown="clickMenu('Menu Item 7')">Menu Item 7</a>
+                    <a href="#" onclick="return false;" onmousedown="clickMenu('Menu Item 8')">Menu Item 8</a>
+                    <a href="#" onclick="return false;" onmousedown="clickMenu('Menu Item 9')">Menu Item 9</a>
+                </div>
+              </div>
+			  
+              <div class="menus">
+                <a href="#" onclick="return false;" onmousedown="dropMenu()" onmouseup="clickMenu('Contact us at 0123456789')">Contact Us</a>
+              </div>
+			  
+			</div>
+			<!--END MENU BAR-->
+  
+		</div>
+		<!--END HEADER-->
+  
+		<div id="main-content" onmouseover="dropMenu()" style="height:500px;">
+			<h2>Welcome</h2>
+	
+			<p>Welcome to my company website</p>
+	
+			<p id="selection">You have not selected anything</p>
+		</div>
+		
+		<script>
+		<!--
+			var ma = ['dropmenu1', 'dropmenu2', 'dropmenu3'];
+			function dropMenu(x) {
+				for(var m in ma) {
+					if(ma[m] != x) {
+						document.getElementById(ma[m]).style.display = "none";
+					}
+				}
+				document.getElementById(x).style.display = "block";
+			}
+		
+			function clickMenu(x) {
+				document.getElementById("selection").innerHTML = x;
+			}
+
+		-->
+		</script>
+		
+	</body>
+</html>
